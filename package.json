@@ -7,7 +7,9 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -15,7 +17,8 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mongoose": "^5.4.0",
-    "validator": "^10.9.0"
+    "validator": "^10.9.0",
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": "8.x"
@@ -28,5 +31,6 @@
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "snyk": true
 }
